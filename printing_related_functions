@@ -1,0 +1,6 @@
+import sys
+
+def print_a_line():
+  sys.stdout.write("Playing " + this_augmented_audio + "...")
+  sys.stdout.flush()
+  
