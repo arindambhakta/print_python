@@ -12,4 +12,6 @@ def print_error(error_to_print, end=''):
     sys.stdout.flush()
 
 
-
+def print_warning(warning_to_print, end=''):
+    sys.stdout.write(pcol.PrintColors.WARNING + warning_to_print + end + pcol.PrintColors.ENDC)
+    sys.stdout.flush()
