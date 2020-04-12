@@ -1,6 +1,15 @@
 import sys
+import print_colours as pcol
 
-def print_a_line():
-  sys.stdout.write("Playing " + this_augmented_audio + "...")
-  sys.stdout.flush()
-  
+
+def print_a_line(line_to_print, end=''):
+    sys.stdout.write(line_to_print + end)
+    sys.stdout.flush()
+
+
+def print_error(error_to_print, end=''):
+    sys.stdout.write(pcol.PrintColors.ERROR + error_to_print + end + pcol.PrintColors.ENDC)
+    sys.stdout.flush()
+
+
+
