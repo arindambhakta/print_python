@@ -8,7 +8,7 @@ def print_a_line(line_to_print, end=''):
 
 
 def print_error(error_to_print, end=''):
-    sys.stdout.write(pcol.PrintColors.ERROR + error_to_print + end + pcol.PrintColors.ENDC)
+    sys.stdout.write(pcol.PrintColors.ERROR + "ERROR: " + error_to_print + end + pcol.PrintColors.ENDC)
     sys.stdout.flush()
 
 
