@@ -1,4 +1,5 @@
 import sys
+import math
 import print_colours as pcol
 
 
@@ -38,8 +39,9 @@ def print_a_small_header(string_to_print, bottom_border='-'):
     return
 
 
-def print_a_separator_line(separator_char='-', line_length=80):
-    print_a_line(separator_char * line_length, end='\n')
+def print_a_separator_line(separator_chars='-', line_length=80):
+    multiplication_factor = math.ceil(line_length // len(separator_chars))
+    print_a_line(separator_chars * multiplication_factor, end='\n')
     return
 
 
@@ -47,6 +49,3 @@ if __name__ == '__main__':
     msg = "test message"
     print_a_boxed_header(msg, box_border='-')
     print_a_small_header(msg, bottom_border='-')
-
-
-
