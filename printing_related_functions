@@ -30,10 +30,13 @@ def print_a_boxed_header(string_to_print, box_border='-'):
 def print_a_small_header(string_to_print, bottom_border='-'):
     str_len = len(string_to_print)
     print_a_line(string_to_print, end='\n')
-    print_a_line(bottom_border * str_len)
+    print_a_line(bottom_border * str_len, end='\n')
 
 
 if __name__ == '__main__':
     msg = "test message"
     print_a_boxed_header(msg, box_border='-')
     print_a_small_header(msg, bottom_border='-')
+
+
+
