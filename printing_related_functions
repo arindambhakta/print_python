@@ -4,24 +4,60 @@ import print_colours as pcol
 
 
 def print_a_line(line_to_print, end=''):
+    """Prints a line
+
+    Args:
+        line_to_print: Line to print
+        end: line end parameter
+
+    Returns:Nothing
+
+    """
     sys.stdout.write(line_to_print + end)
     sys.stdout.flush()
     return
 
 
 def print_error(error_to_print, end=''):
+    """Prints error
+
+    Args:
+        error_to_print: Error to print
+        end:
+
+    Returns:
+
+    """
     sys.stdout.write(pcol.PrintColors.ERROR + "ERROR: " + error_to_print + end + pcol.PrintColors.ENDC + "\n")
     sys.stdout.flush()
     return
 
 
 def print_warning(warning_to_print, end=''):
+    """Prints warning
+
+    Args:
+        warning_to_print: Warning message to print
+        end:
+
+    Returns:Nothing
+
+    """
     sys.stdout.write(pcol.PrintColors.WARNING + "WARNING: " + warning_to_print + end + pcol.PrintColors.ENDC + "\n")
     sys.stdout.flush()
     return
 
 
 def print_a_boxed_header(string_to_print, box_border='-'):
+    """Prints a boxed header
+
+    Args:
+        string_to_print: Sting in the boxed header to print
+        box_border: Border char type
+
+    Returns:Nothing
+
+    """
     str_len = len(string_to_print)
     top_and_bottom_borders = box_border * (str_len + 4)
     box_content = f"| {string_to_print} |"
@@ -33,6 +69,15 @@ def print_a_boxed_header(string_to_print, box_border='-'):
 
 
 def print_a_small_header(string_to_print, bottom_border='-'):
+    """Prints a small header
+
+    Args:
+        string_to_print: Sting to print
+        bottom_border: Bottom border char
+
+    Returns:Nothing
+
+    """
     str_len = len(string_to_print)
     print_a_line(string_to_print, end='\n')
     print_a_line(bottom_border * str_len, end='\n')
@@ -40,6 +85,15 @@ def print_a_small_header(string_to_print, bottom_border='-'):
 
 
 def print_a_separator_line(separator_chars='-', line_length=80):
+    """Prints a separator line
+
+    Args:
+        separator_chars: Char to print
+        line_length: Length of the line
+
+    Returns:Nothing
+
+    """
     multiplication_factor = math.ceil(line_length // len(separator_chars))
     print_a_line(separator_chars * multiplication_factor, end='\n')
     return
